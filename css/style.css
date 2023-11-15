@@ -9,6 +9,8 @@ body{
     min-height: 100vh;
 }
 
+/* Header */
+
 header{
     z-index: 999;
     top: 0;
@@ -18,10 +20,21 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
+    transition: 0.6s;
 }
 
+header.sticky{
+    background: #026DAF;
+    padding: 13px 100px;
+}
+
+header.sticky .menu-pc a{
+    color: #fff;
+}
+
+
 .logo img{
-    width: 350px;
+    width: 300px;
 }
 
 header .menu-pc{
@@ -32,10 +45,66 @@ header .menu-pc{
 }
 
 header .menu-pc a{
-    font-size: 23px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
     font-weight: 500;
-    background-color: #fff;
     margin: 0 30px;
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 15px;
+    transition: 0.4s;
+    transition-property: color, background;
 }
+
+header .menu-pc a:hover{
+    color: #fff;
+    background: #026DAF;
+}
+
+header .btn{
+    color: #000;
+    font-size: 27px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1060px){
+    header .btn{
+        display: block;
+    }
+
+    header .menu-pc{
+        position: fixed;
+        background: #026DAF;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding: 80px 50px;
+    }
+    header .menu-pc a{
+        display: block;
+        color: #fff;
+        margin: 20px;
+        padding: 0 15px;
+    }
+
+    header .menu-pc a:hover{
+        display: block;
+        color: #000;
+        background: #fff;
+    }
+
+    header .menu-pc .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+    header .menu-pc .close-btn::before{
+        color: #fff;
+    }
+}
+
+/* Header termina */
