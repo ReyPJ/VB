@@ -20,16 +20,23 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 
 header.sticky{
+    box-shadow: 40px 40px 50px rgba(0, 0, 0, 0.2);
+    position: fixed;
     background: #026DAF;
-    padding: 13px 100px;
+    padding: 15px 100px;
 }
 
-header.sticky .menu-pc a{
+header.sticky .menu a{
     color: #fff;
+}
+
+header.sticky .menu a:hover{
+    background: #fff;
+    color: #000;
 }
 
 
@@ -37,14 +44,14 @@ header.sticky .menu-pc a{
     width: 300px;
 }
 
-header .menu-pc{
+header .menu{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header .menu-pc a{
+header .menu a{
     color: #000;
     text-decoration: none;
     font-size: 20px;
@@ -56,7 +63,7 @@ header .menu-pc a{
     transition-property: color, background;
 }
 
-header .menu-pc a:hover{
+header .menu a:hover{
     color: #fff;
     background: #026DAF;
 }
@@ -73,37 +80,56 @@ header .btn{
         display: block;
     }
 
-    header .menu-pc{
+    header .menu{
         position: fixed;
         background: #026DAF;
         flex-direction: column;
         min-width: 400px;
         height: 100vh;
         top: 0;
-        right: 0;
+        right: -100%;
         padding: 80px 50px;
+        transition: 0.5s;
     }
-    header .menu-pc a{
+
+    header .menu.active{
+        right: 0;
+    }
+
+    header .menu a{
         display: block;
         color: #fff;
         margin: 20px;
         padding: 0 15px;
     }
 
-    header .menu-pc a:hover{
+    header .menu a:hover{
         display: block;
         color: #000;
         background: #fff;
     }
 
-    header .menu-pc .close-btn{
+    header .menu .close-btn{
         position: absolute;
         top: 0;
         left: 0;
         margin: 25px;
     }
-    header .menu-pc .close-btn::before{
+    header .menu .close-btn::before{
         color: #fff;
+    }
+}
+
+.logo img{
+    width: 260px;
+}
+
+@media (max-width: 570px){
+    .logo img{
+        width: 200px;
+    }
+    header{
+        justify-content: space-around;
     }
 }
 

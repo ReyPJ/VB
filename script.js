@@ -10,12 +10,23 @@ window.addEventListener('scroll', function(){
 });
 
 // Responsive menu de navegacion abrir y cerrar
+//Usamos un window.addEventListener("load", function(){}) para que ejectute el codigo hasta que todo el dominion haya cargado
 
-var menu = document.querySelector('.menu-pc');
-var menuBtn = document.querySelector('.menu-btn');
-var closeBtn = document.querySelector('.close-btn');
+window.addEventListener("load", function(){
+    var menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu-btn');
+    var closeBtn = document.querySelector('.close-btn');
+    menuBtn.addEventListener('click', ()=>{
+        menu.classList.add('active');
+    });
+    
+    closeBtn.addEventListener('click', ()=>{
+        menu.classList.remove('active');
+    });
+    
+})
 
-menuBtn.addEventListener("click", ()=>{
-    menu.classList.add('active');
-});
+
+
+
 
