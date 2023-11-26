@@ -24,7 +24,7 @@ window.addEventListener("load", function(){
         menu.classList.remove('active');
     });
     
-})
+});
 
 
 

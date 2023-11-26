@@ -5,7 +5,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+button{
+    border-radius: 10px;
+    border-color: #fff;
+    cursor: pointer;
+}
+
 body{
+    /* background: #000; */
     min-height: 100vh;
 }
 
@@ -75,8 +82,9 @@ header .btn{
     display: none;
 }
 
-@media (max-width: 1060px){
+@media (max-width: 1140px){
     header .btn{
+        color: #fff;
         display: block;
     }
 
@@ -90,6 +98,7 @@ header .btn{
         right: -100%;
         padding: 80px 50px;
         transition: 0.5s;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
     }
 
     header .menu.active{
@@ -134,3 +143,78 @@ header .btn{
 }
 
 /* Header termina */
+/* Textos de inicio */
+
+.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: #8a8a8a;
+    background-image: url('../fondo1.jpg');
+   /* background-repeat: no-repeat;*/
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 280px;
+    padding-bottom: 280px;
+}
+
+.text1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text1 h1{
+    font-size: 60px;
+}
+
+.text1 h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.text1 h2 .strong{
+    font-weight: bold;
+}
+
+.buttons{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.callnow{
+    color: #fff;
+    background: #026DAF;
+    font-size: 16px;
+    padding: 2px 8px 2px 8px;
+    margin-right: 5px;
+    border-style: none;
+    transition: 0.3s;
+}
+
+.callnow:hover{
+    color: #000;
+    background: #fff;
+}
+
+.ubicw{
+    color: #fff;
+    background: #026DAF;
+    font-size: 16px;
+    padding: 2px 8px 2px 8px;
+    margin-left: 5px;
+    border-style: none;
+    transition: 0.3s;
+}
+
+.ubicw:hover{
+    color: #000;
+    background: #fff;
+}
+
+/* Textos de Temrina (falta hacerlo responsive */
+
+/* Servicios inician */
