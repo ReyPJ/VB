@@ -26,6 +26,31 @@ window.addEventListener("load", function(){
     
 });
 
+// Codigo de la seccion de servicios, usamos funcione de hover dentro del javascript para cambiar el contenido dentro de este, cosa que no puedes hacer en css con la opcion de :hover//
+
+window.addEventListener("load", ()=>{
+    var paw = document.getElementById('paw')
+    var amb = document.getElementById('si1')
+    var tab = document.getElementById('Tab')
+    var lab = document.getElementById('si2')
+    paw.addEventListener('mouseover', ()=>{
+        paw.src = 'vpaw1.png'
+        amb.src = 'ambu.png'
+    });
+    paw.addEventListener('mouseout', ()=>{
+        paw.src = 'vpaw2.png'
+        amb.src = 'vetIconW.png'
+    });
+    tab.addEventListener('mouseover', ()=>{
+        tab.src = 'vetTab.png'
+        lab.src = 'lab.png'
+    });
+    tab.addEventListener('mouseout', ()=>{
+        tab.src = 'vetTab2.png'
+        lab.src = 'anes2.png'
+    });
+});
+
 
 
 
